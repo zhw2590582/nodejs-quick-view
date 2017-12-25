@@ -11,7 +11,7 @@ NodeJS文档快速预览
 * [dgram](https://github.com/zhw2590582/nodejs-quick-view/blob/master/dgram.js)
 * [dns](https://github.com/zhw2590582/nodejs-quick-view/blob/master/dns.js)
 * [Error](https://github.com/zhw2590582/nodejs-quick-view/blob/master/Error.js)
-* [events](https://github.com/zhw2590582/nodejs-quick-view/blob/master/events.js)
+* [events -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/events.js)
 * [fs](https://github.com/zhw2590582/nodejs-quick-view/blob/master/fs.js)
 * [global -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/global.js)
 * [http](https://github.com/zhw2590582/nodejs-quick-view/blob/master/http.js)
