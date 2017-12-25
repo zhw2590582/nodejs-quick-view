@@ -19,7 +19,7 @@ NodeJS文档快速预览
 * [module](https://github.com/zhw2590582/nodejs-quick-view/blob/master/module.js)
 * [net](https://github.com/zhw2590582/nodejs-quick-view/blob/master/net.js)
 * [os -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/os.js)
-* [path](https://github.com/zhw2590582/nodejs-quick-view/blob/master/path.js)
+* [path -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/path.js)
 * [process](https://github.com/zhw2590582/nodejs-quick-view/blob/master/process.js)
 * [querystring](https://github.com/zhw2590582/nodejs-quick-view/blob/master/querystring.js)
 * [readline](https://github.com/zhw2590582/nodejs-quick-view/blob/master/readline.js)
