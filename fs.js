@@ -51,64 +51,117 @@ fs.copyFileSync(src, dest[, flags])
 
 // 返回一个新建的 ReadStream 对象
 fs.createReadStream(path[, options])
+
+// 返回一个新建的 WriteStream 对象
 fs.createWriteStream(path[, options])
 
-
+// 通过检查文件系统来测试给定的路径是否存在
 fs.existsSync(path)
+
+// 更改文件权限（文件描述符）
 fs.fchmod(fd, mode, callback)
 fs.fchmodSync(fd, mode)
+
+// 更改文件所有权(文件描述符)
 fs.fchown(fd, uid, gid, callback)
 fs.fchownSync(fd, uid, gid)
+
+// 刷新数据到磁盘
 fs.fdatasync(fd, callback)
 fs.fdatasyncSync(fd)
+
+// 返回文件的详细信息
 fs.fstat(fd, callback)
 fs.fstatSync(fd)
+
+// 同步缓存数据到磁盘
 fs.fsync(fd, callback)
 fs.fsyncSync(fd)
+
+// 截取文件内容
 fs.ftruncate(fd[, len], callback)
 fs.ftruncateSync(fd[, len])
+
+// 更改一个文件所提供的文件描述符引用的文件的时间戳
 fs.futimes(fd, atime, mtime, callback)
 fs.futimesSync(fd, atime, mtime)
+
+// 更改文件权限(不解析符号链接)
 fs.lchmod(path, mode, callback)
 fs.lchmodSync(path, mode)
+
+// 更改文件所有权（不解析符号链接）
 fs.lchown(path, uid, gid, callback)
 fs.lchownSync(path, uid, gid)
+
+// 创建硬链接(只能在本券中)
 fs.link(existingPath, newPath, callback)
 fs.linkSync(existingPath, newPath)
+
+// 获取文件信息(不解析符号链接)
 fs.lstat(path, callback)
 fs.lstatSync(path)
+
+// 创建文件目录，如果目录已存在，将抛出异常
 fs.mkdir(path[, mode], callback)
 fs.mkdirSync(path[, mode])
+
+// 创建一个唯一的临时目录
 fs.mkdtemp(prefix[, options], callback)
 fs.mkdtempSync(prefix[, options])
+
+// 打开文件
 fs.open(path, flags[, mode], callback)
 fs.openSync(path, flags[, mode])
+
+// 从 fd 指定的文件中读取数据
 fs.read(fd, buffer, offset, length, position, callback)
+fs.readSync(fd, buffer, offset, length, position)
+
+// 读取一个目录的内容
 fs.readdir(path[, options], callback)
 fs.readdirSync(path[, options])
+
+// 读取一个文件的全部内容
 fs.readFile(path[, options], callback)
 fs.readFileSync(path[, options])
+
+// 读取软连接信息
 fs.readlink(path[, options], callback)
 fs.readlinkSync(path[, options])
-fs.readSync(fd, buffer, offset, length, position)
+
+// 获取真实路径
 fs.realpath(path[, options], callback)
 fs.realpathSync(path[, options])
+
+// 重命名路径
 fs.rename(oldPath, newPath, callback)
 fs.renameSync(oldPath, newPath)
+
+// 删除文件目录
 fs.rmdir(path, callback)
 fs.rmdirSync(path)
+
+// 获取文件信息
 fs.stat(path, callback)
 fs.statSync(path)
+
 fs.symlink(target, path[, type], callback)
 fs.symlinkSync(target, path[, type])
+
 fs.truncate(path[, len], callback)
 fs.truncateSync(path[, len])
+
 fs.unlink(path, callback)
 fs.unlinkSync(path)
+
 fs.unwatchFile(filename[, listener])
+
 fs.utimes(path, atime, mtime, callback)
 fs.utimesSync(path, atime, mtime)
+
 fs.watch(filename[, options][, listener])
+
 fs.watchFile(filename[, options], listener)
 fs.write(fd, buffer[, offset[, length[, position]]], callback)
 fs.write(fd, string[, position[, encoding]], callback)
