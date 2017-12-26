@@ -146,23 +146,30 @@ fs.rmdirSync(path)
 fs.stat(path, callback)
 fs.statSync(path)
 
+// 创建符号链接
 fs.symlink(target, path[, type], callback)
 fs.symlinkSync(target, path[, type])
 
+// 文件内容截取操作
 fs.truncate(path[, len], callback)
 fs.truncateSync(path[, len])
 
+// 删除文件操作
 fs.unlink(path, callback)
 fs.unlinkSync(path)
 
+// 解除文件监控
 fs.unwatchFile(filename[, listener])
 
+// 修改文件时间戳
 fs.utimes(path, atime, mtime, callback)
 fs.utimesSync(path, atime, mtime)
 
+// 监视 filename 的变化，filename 可以是一个文件或一个目录
 fs.watch(filename[, options][, listener])
-
 fs.watchFile(filename[, options], listener)
+
+// 向文件写数据
 fs.write(fd, buffer[, offset[, length[, position]]], callback)
 fs.write(fd, string[, position[, encoding]], callback)
 fs.writeFile(file, data[, options], callback)
