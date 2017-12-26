@@ -22,7 +22,7 @@ NodeJS文档快速预览
 * [path -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/path.js)
 * [process](https://github.com/zhw2590582/nodejs-quick-view/blob/master/process.js)
 * [querystring -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/querystring.js)
-* [readline](https://github.com/zhw2590582/nodejs-quick-view/blob/master/readline.js)
+* [readline -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/readline.js)
 * [repl](https://github.com/zhw2590582/nodejs-quick-view/blob/master/repl.js)
 * [stream](https://github.com/zhw2590582/nodejs-quick-view/blob/master/stream.js)
 * [string_decoder -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/string_decoder.js)
