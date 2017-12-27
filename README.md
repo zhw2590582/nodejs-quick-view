@@ -28,7 +28,7 @@ NodeJS文档快速预览
 * [string_decoder -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/string_decoder.js)
 * [timer -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/timer.js)
 * [tls](https://github.com/zhw2590582/nodejs-quick-view/blob/master/tls.js)
-* [tty](https://github.com/zhw2590582/nodejs-quick-view/blob/master/tty.js)
+* [tty -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/tty.js)
 * [url -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/url.js)
 * [util -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/util.js)
 * [v8](https://github.com/zhw2590582/nodejs-quick-view/blob/master/v8.js)
