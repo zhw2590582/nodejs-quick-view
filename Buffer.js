@@ -22,15 +22,15 @@ Buffer.poolSize // 这是用于决定预分配的、内部 Buffer 实例池的�
 // 实例属性与方法
 buf.buffer // 属性指向创建该 Buffer 的底层的 ArrayBuffer 对象
 buf.compare(target[, targetStart[, targetEnd[, sourceStart[, sourceEnd]]]]) // 比较 buf 与 target，返回表明 buf 在排序上是否排在 target 之前、或之后、或相同。 对比是基于各自 Buffer 实际的字节序列。
-buf.copy(target[, targetStart[, sourceStart[, sourceEnd]]]) // 
-buf.entries() // 
-buf.equals(otherBuffer) // 
-buf.fill(value[, offset[, end]][, encoding]) // 
-buf.includes(value[, byteOffset][, encoding]) // 
-buf.indexOf(value[, byteOffset][, encoding]) // 
-buf.keys() // 
-buf.lastIndexOf(value[, byteOffset][, encoding]) // 
-buf.length // 
+buf.copy(target[, targetStart[, sourceStart[, sourceEnd]]]) // 拷贝 buf 的一个区域的数据到 target 的一个区域，即便 target 的内存区域与 buf 的重叠。
+buf.entries() // 从 buf 的内容中，创建并返回一个 [index, byte] 形式的迭代器。
+buf.equals(otherBuffer) // 如果 buf 与 otherBuffer 具有完全相同的字节，则返回 true，否则返回 false。
+buf.fill(value[, offset[, end]][, encoding]) // 如果未指定 offset 和 end，则填充整个 buf。 这个简化使得一个 Buffer 的创建与填充可以在一行内完成。
+buf.includes(value[, byteOffset][, encoding]) // 相当于 buf.indexOf() !== -1
+buf.indexOf(value[, byteOffset][, encoding]) // buf 中 value 首次出现的索引，如果 buf 没包含 value 则返回 -1
+buf.keys() // 创建并返回一个包含 buf 键名（索引）的迭代器。
+buf.lastIndexOf(value[, byteOffset][, encoding]) // 与 buf.indexOf() 类似，除了 buf 是从后往前搜索而不是从前往后。
+buf.length // 返回 buf 在字节数上分配的内存量。 注意，这并不一定反映 buf 内可用的数据量。
 buf.readDoubleBE(offset[, noAssert]) // 
 buf.readDoubleLE(offset[, noAssert]) // 
 buf.readFloatBE(offset[, noAssert]) // 
@@ -49,14 +49,14 @@ buf.readUInt32BE(offset[, noAssert]) //
 buf.readUInt32LE(offset[, noAssert]) // 
 buf.readUIntBE(offset, byteLength[, noAssert]) // 
 buf.readUIntLE(offset, byteLength[, noAssert]) // 
-buf.slice([start[, end]]) // 
+buf.slice([start[, end]]) // 返回一个指向相同原始内存的新建的 Buffer，但做了偏移且通过 start 和 end 索引进行裁剪。
 buf.swap16() // 
 buf.swap32() // 
 buf.swap64() // 
-buf.toJSON() // 
-buf.toString([encoding[, start[, end]]]) // 
-buf.values() // 
-buf.write(string[, offset[, length]][, encoding]) // 
+buf.toJSON() // 返回 buf 的 JSON 格式。 当字符串化一个 Buffer 实例时，JSON.stringify() 会隐式地调用该函数。
+buf.toString([encoding[, start[, end]]]) // 根据 encoding 指定的字符编码解码 buf 成一个字符串。 start 和 end 可传入用于只解码 buf 的一部分。
+buf.values() // 创建并返回一个包含 buf 的值（字节）的迭代器。 当 Buffer 使用 for..of 时会自动调用该函数。
+buf.write(string[, offset[, length]][, encoding]) // 根据 encoding 的字符编码写入 string 到 buf 中的 offset 位置。 length 参数是写入的字节数。
 buf.writeDoubleBE(value, offset[, noAssert]) // 
 buf.writeDoubleLE(value, offset[, noAssert]) // 
 buf.writeFloatBE(value, offset[, noAssert]) // 
@@ -75,3 +75,10 @@ buf.writeUInt32BE(value, offset[, noAssert]) //
 buf.writeUInt32LE(value, offset[, noAssert]) // 
 buf.writeUIntBE(value, offset, byteLength[, noAssert]) // 
 buf.writeUIntLE(value, offset, byteLength[, noAssert]) // 
+
+// 注意，这些属性是在通过 require('buffer') 返回的 buffer 模块上，而不是在 Buffer 的全局变量或 Buffer 实例上
+buffer.INSPECT_MAX_BYTES // 当调用 buf.inspect() 时返回的最大字节数。 可以被用户模块重写。
+buffer.kMaxLength // buffer.constants.MAX_LENGTH 的别名
+buffer.transcode(source, fromEnc, toEnc) // 将给定的 Buffer 或 Uint8Array 实例从一个字符编码重新编码到另一个字符。 返回一个新的Buffer实例
+buffer.constants.MAX_LENGTH // 在32位体系结构上，这个值是(2^30)-1 (~1GB)。 在64位体系结构上，这个值是(2^31)-1 (~2GB)。
+buffer.constants.MAX_STRING_LENGTH // 代表string能有的原始最大长度，以UTF-16代码为单位。
