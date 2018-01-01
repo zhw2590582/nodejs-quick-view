@@ -3,6 +3,7 @@ NodeJS文档快速预览
 
 ## 目录
 * [assert -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/assert.js)
+* [async_hooks -- 完成](https://github.com/zhw2590582/nodejs-quick-view/blob/master/async_hooks.js)
 * [Buffer](https://github.com/zhw2590582/nodejs-quick-view/blob/master/Buffer.js)
 * [child_process](https://github.com/zhw2590582/nodejs-quick-view/blob/master/child_process.js)
 * [cluster](https://github.com/zhw2590582/nodejs-quick-view/blob/master/cluster.js)
